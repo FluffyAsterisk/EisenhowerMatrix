@@ -72,12 +72,14 @@ void draw_tasks(int width, string arr1[], string arr2[], int arr1_sz, int arr2_s
 
 	for (int i = 0; i < max_length; i++)
 	{
+		// If one array is bigger than other
 		if (i >= arr1_sz && i < arr2_sz )
 		{
 			string text[] = {"", arr2[i]};
 			draw_line(width, text);
 		}
-		else if (i < arr1_sz && i >= arr2_sz ) {
+		else if (i < arr1_sz && i >= arr2_sz ) 
+		{
 			string text[] = {arr1[i], ""};
 			draw_line(width, text);
 		}
@@ -91,10 +93,10 @@ void draw_tasks(int width, string arr1[], string arr2[], int arr1_sz, int arr2_s
 
 void draw_table(int width)
 {
-	string ui[] = {"ur, imp", "Do tasks", "Do some more", "Another one", "aksdfj","Cocks"};
+	string ui[] = {"ur, imp", "Do tasks", "Do some more", "Another one", "aksdfj","knocks"};
 	string ni[] = {"not ur, imp", "asd", "12345"};
 	string un[] = {"ur, not imp", "asd", "12345"};
-	string nn[] = {"not ur, not imp", "asd", "12345", "cockckckc"};
+	string nn[] = {"not ur, not imp", "asd", "12345", "knockckckc"};
 
 	draw_y_border(width);
 
@@ -108,7 +110,6 @@ void draw_table(int width)
 
 	cout << endl;
 }
-
 
 int main(int argc, char* argv[])
 {
