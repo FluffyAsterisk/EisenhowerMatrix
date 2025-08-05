@@ -10,12 +10,13 @@ CC=g++
 COMPILER_FLAGS_DEBUG=-std=c++17 -static -ggdb -O0 -pedantic-errors -Wall -Weffc++ -Wextra -Wconversion -Wsign-conversion
 COMPILER_FLAGS_RELEASE=-std=c++17 -static -O2 -DNDEBUG -pedantic-errors 
 LINKER_FLAGS=
+FILES=main.cpp table_renderer.cpp
 
 debug: main.cpp
-	$(CC)  $(COMPILER_FLAGS_DEBUG) $(LINKER_FLAGS) main.cpp -o main
+	$(CC)  $(COMPILER_FLAGS_DEBUG) $(LINKER_FLAGS) $(FILES) -o main
 
 release:
-	$(CC) $(COMPILER_FLAGS_RELEASE) $(LINKER_FLAGS) main.cpp -o main
+	$(CC) $(COMPILER_FLAGS_RELEASE) $(LINKER_FLAGS) $(FILES) -o main
 
 clean:
 	rm main
